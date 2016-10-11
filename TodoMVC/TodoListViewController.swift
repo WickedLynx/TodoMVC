@@ -13,6 +13,8 @@ class TodoListViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView?
     private let cellIdentifier = "TodoCellIdentifier"
     private var todos: [TodoItem] = []
+    private lazy var wireframe = TodoListWireframe()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +50,7 @@ class TodoListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func touchAdd() {
-        let addController = CreateTodoViewController(nibName: "CreateTodoViewController", bundle: nil)
-        navigationController?.pushViewController(addController, animated: true)
+        wireframe.showCreateTodoScreen()
     }
     
     
