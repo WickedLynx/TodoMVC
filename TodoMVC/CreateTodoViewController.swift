@@ -11,6 +11,7 @@ import Alamofire
 
 class CreateTodoViewController: UIViewController {
     @IBOutlet weak var textField: UITextField?
+    private lazy var wireframe = CreateTodoWireframe()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +44,8 @@ class CreateTodoViewController: UIViewController {
                 self?.showAlertWithMessage(createResponse?.error?.nsError.localizedDescription ?? "Unable to create todo")
                 return
             }
-            self?.navigationController?.popViewControllerAnimated(true)
+            self?.wireframe.goBack()
         }
 
     }
-    
-
 }

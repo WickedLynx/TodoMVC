@@ -18,6 +18,7 @@
 		FAAC508F1DACFC0B003E7E0F /* CreateTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC508E1DACFC0A003E7E0F /* CreateTodoViewController.swift */; };
 		FAAC50911DAD0478003E7E0F /* TodoListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50901DAD0478003E7E0F /* TodoListWireframe.swift */; };
 		FAAC50931DAD04F5003E7E0F /* TodoAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50921DAD04F5003E7E0F /* TodoAppRouter.swift */; };
+		FAAC50951DAD0829003E7E0F /* CreateTodoWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50941DAD0829003E7E0F /* CreateTodoWireframe.swift */; };
 		FAD44F0A1DABAD730099D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44F091DABAD730099D708 /* AppDelegate.swift */; };
 		FAD44F111DABAD730099D708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F101DABAD730099D708 /* Assets.xcassets */; };
 		FAD44F141DABAD730099D708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F121DABAD730099D708 /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		FAAC508E1DACFC0A003E7E0F /* CreateTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoViewController.swift; sourceTree = "<group>"; };
 		FAAC50901DAD0478003E7E0F /* TodoListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListWireframe.swift; sourceTree = "<group>"; };
 		FAAC50921DAD04F5003E7E0F /* TodoAppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAppRouter.swift; sourceTree = "<group>"; };
+		FAAC50941DAD0829003E7E0F /* CreateTodoWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoWireframe.swift; sourceTree = "<group>"; };
 		FAD44F061DABAD730099D708 /* TodoMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD44F091DABAD730099D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD44F101DABAD730099D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				FAAC508E1DACFC0A003E7E0F /* CreateTodoViewController.swift */,
 				FAAC50901DAD0478003E7E0F /* TodoListWireframe.swift */,
 				FAAC50921DAD04F5003E7E0F /* TodoAppRouter.swift */,
+				FAAC50941DAD0829003E7E0F /* CreateTodoWireframe.swift */,
 			);
 			path = TodoMVC;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				FAAC50861DACF1A4003E7E0F /* TodoItem.swift in Sources */,
 				FAAC50891DACF3B5003E7E0F /* AuthManager.swift in Sources */,
 				FAD44F281DABB07D0099D708 /* LoginViewController.swift in Sources */,
+				FAAC50951DAD0829003E7E0F /* CreateTodoWireframe.swift in Sources */,
 				FAAC50911DAD0478003E7E0F /* TodoListWireframe.swift in Sources */,
 				FAAC50871DACF1A4003E7E0F /* User.swift in Sources */,
 				FAAC50851DACF1A4003E7E0F /* APIError.swift in Sources */,

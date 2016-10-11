@@ -17,4 +17,8 @@ class TodoAppRouter {
     func pushViewController(viewController: UIViewController, animated: Bool) {
         navigationController?.pushViewController(viewController, animated: animated)
     }
+    
+    func popCurrentViewController(animated: Bool) {
+        navigationController?.popViewControllerAnimated(animated)
+    }
 }
