@@ -1,24 +1,36 @@
 PODS:
   - Alamofire (3.4.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
   - MockFive (0.03)
   - Nimble (3.2.0)
+  - Nimble-Snapshots (4.2.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
   - ObjectMapper (1.3.0)
-  - Quick (0.10.0)
+  - Quick (0.8.0)
 
 DEPENDENCIES:
   - Alamofire (= 3.4.1)
   - MockFive
   - Nimble (~> 3.0)
+  - Nimble-Snapshots
   - ObjectMapper (~> 1.3.0)
-  - Quick (~> 0.8)
+  - Quick (= 0.8)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   MockFive: 0a8a473f8c9ae55d852dc0dfa42d0dde8b0f44e6
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble-Snapshots: 4826e3ee211d2c7af27645e35d68b9e9917882e7
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
-  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 
-PODFILE CHECKSUM: 46b1cd87f16f7029d5222a0a50913044cd901058
+PODFILE CHECKSUM: 3b5ec6072f2de74695a3dee08d0feece39c02d30
 
 COCOAPODS: 1.0.1

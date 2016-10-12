@@ -12,7 +12,9 @@ end
 
 target 'TodoMVCTests' do
 	use_frameworks!
-	pod 'Quick', '~> 0.8'
+	pod 'ObjectMapper', '~> 1.3.0'
+	pod 'Quick', '0.8'
 	pod 'Nimble', '~> 3.0'
 	pod 'MockFive'
+	pod 'Nimble-Snapshots'
 end

@@ -16,12 +16,16 @@ struct TodoItem: Mappable {
     init?(_ map: Map) {
     }
     
+    init(description: String?, identifier: String?) {
+        self.description = description
+        self.identifier = identifier
+    }
+    
     mutating func mapping(map: Map) {
         description <- map["description"]
         identifier <- map["_id"]
     }
 }
-
 struct GetTodosResponse: Mappable {
     var todos: [TodoItem]?
     var error: APIError?

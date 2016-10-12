@@ -9,7 +9,11 @@
 import Foundation
 import Alamofire
 
-class TodoService {
+protocol ITodoService {
+    func createTodo(text: String, success: (TodoItem) -> Void, failure: (NSError? -> Void))
+}
+
+class TodoService: ITodoService {
     let authManager: AuthManager
     
     init(authManager: AuthManager) {

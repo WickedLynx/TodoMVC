@@ -20,7 +20,7 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
     private lazy var wireframe = CreateTodoWireframe()
     private var presenter: CreateTodoPresenter?
-    private var service: TodoService?
+    private var service: ITodoService?
     
     
     override func viewDidLoad() {

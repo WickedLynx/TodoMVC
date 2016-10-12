@@ -10,9 +10,9 @@ import Foundation
 
 class CreateTodoPresenter {
     private weak var createTodoView: ICreateTodoView?
-    private let service: TodoService
+    private let service: ITodoService
     
-    init(createTodoView: ICreateTodoView, service: TodoService) {
+    init(createTodoView: ICreateTodoView, service: ITodoService) {
         self.createTodoView = createTodoView
         self.service = service
     }
