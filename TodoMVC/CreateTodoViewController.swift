@@ -11,6 +11,9 @@ import Alamofire
 
 protocol ICreateTodoView: class {
     func showErrorMessage(message: String)
+    func showLoading()
+    func hideLoading()
+    func onCreateTodo()
 }
 
 class CreateTodoViewController: UIViewController, ICreateTodoView {
@@ -22,11 +25,19 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = CreateTodoPresenter(createTodoView: self)
         service = TodoService(authManager: AuthManager.sharedManager)
+        presenter = CreateTodoPresenter(createTodoView: self, service: service!)
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    func showLoading() {
+        startLoading()
+    }
+    
+    func hideLoading() {
+        stopLoading()
     }
     
     func touchDone() {
@@ -37,23 +48,11 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
         showAlertWithMessage(message)
     }
     
-    func goBack() {
+    func onCreateTodo() {
+        wireframe.goBack()
     }
     
     func addTodo() {
-        let todoText = textField?.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        guard let text = todoText where text.characters.count > 0 else {
-            showAlertWithMessage("Please enter the todo description")
-            return
-        }
-        startLoading()
-        service?.createTodo(text, success: {[weak self] (_) in
-            self?.stopLoading()
-            self?.wireframe.goBack()
-            }, failure: {[weak self] (error) in
-                self?.stopLoading()
-                self?.showErrorMessage(error?.localizedDescription ?? "Cannot create Todo")
-            })
-
+        presenter?.addTodo(textField?.text)
     }
 }
