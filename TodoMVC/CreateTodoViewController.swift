@@ -9,12 +9,19 @@
 import UIKit
 import Alamofire
 
-class CreateTodoViewController: UIViewController {
+protocol ICreateTodoView: class {
+    func showErrorMessage(message: String)
+    func createTodoWithText(todoText: String)
+}
+
+class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
     private lazy var wireframe = CreateTodoWireframe()
-
+    private var presenter: CreateTodoPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = CreateTodoPresenter(createTodoView: self)
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
@@ -22,6 +29,13 @@ class CreateTodoViewController: UIViewController {
     
     func touchDone() {
         addTodo()
+    }
+    
+    func showErrorMessage(message: String) {
+        showAlertWithMessage(message)
+    }
+    
+    func createTodoWithText(todoText: String) {
     }
     
     func addTodo() {
