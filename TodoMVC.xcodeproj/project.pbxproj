@@ -21,6 +21,8 @@
 		FAAC50D91DAD1E87003E7E0F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50D71DAD1E87003E7E0F /* AccountService.swift */; };
 		FAAC50DA1DAD1E87003E7E0F /* BalanceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50D81DAD1E87003E7E0F /* BalanceValidator.swift */; };
 		FAAC50DC1DAD1EA0003E7E0F /* BalanceValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50DB1DAD1EA0003E7E0F /* BalanceValidatorTests.swift */; };
+		FAAC50DE1DAE16B8003E7E0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50DD1DAE16B8003E7E0F /* SignUpViewController.swift */; };
+		FAAC50E01DAE1B52003E7E0F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50DF1DAE1B52003E7E0F /* ProfileViewController.swift */; };
 		FAD44F0A1DABAD730099D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44F091DABAD730099D708 /* AppDelegate.swift */; };
 		FAD44F111DABAD730099D708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F101DABAD730099D708 /* Assets.xcassets */; };
 		FAD44F141DABAD730099D708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F121DABAD730099D708 /* LaunchScreen.storyboard */; };
@@ -64,6 +66,8 @@
 		FAAC50D71DAD1E87003E7E0F /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FAAC50D81DAD1E87003E7E0F /* BalanceValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceValidator.swift; sourceTree = "<group>"; };
 		FAAC50DB1DAD1EA0003E7E0F /* BalanceValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceValidatorTests.swift; sourceTree = "<group>"; };
+		FAAC50DD1DAE16B8003E7E0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FAAC50DF1DAE1B52003E7E0F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FAD44F061DABAD730099D708 /* TodoMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD44F091DABAD730099D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD44F101DABAD730099D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				FAAC508A1DACF6CF003E7E0F /* TodoListViewController.swift */,
 				FAAC508C1DACF95E003E7E0F /* UIViewControllerAdditions.swift */,
 				FAAC508E1DACFC0A003E7E0F /* CreateTodoViewController.swift */,
+				FAAC50DD1DAE16B8003E7E0F /* SignUpViewController.swift */,
+				FAAC50DF1DAE1B52003E7E0F /* ProfileViewController.swift */,
 			);
 			path = TodoMVC;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				FAAC50DA1DAD1E87003E7E0F /* BalanceValidator.swift in Sources */,
 				FAAC50861DACF1A4003E7E0F /* TodoItem.swift in Sources */,
 				FAAC50891DACF3B5003E7E0F /* AuthManager.swift in Sources */,
+				FAAC50E01DAE1B52003E7E0F /* ProfileViewController.swift in Sources */,
 				FAD44F281DABB07D0099D708 /* LoginViewController.swift in Sources */,
 				FAAC50871DACF1A4003E7E0F /* User.swift in Sources */,
 				FAAC50851DACF1A4003E7E0F /* APIError.swift in Sources */,
@@ -409,6 +416,7 @@
 				FAAC508D1DACF95E003E7E0F /* UIViewControllerAdditions.swift in Sources */,
 				FAAC50D91DAD1E87003E7E0F /* AccountService.swift in Sources */,
 				FAAC508F1DACFC0B003E7E0F /* CreateTodoViewController.swift in Sources */,
+				FAAC50DE1DAE16B8003E7E0F /* SignUpViewController.swift in Sources */,
 				FAAC50811DACF103003E7E0F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

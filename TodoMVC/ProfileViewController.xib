@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileView" customModule="TooDoApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TodoMVC" customModuleProvider="target">
             <connections>
                 <outlet property="loginButton" destination="Zho-hC-m1n" id="zVx-t4-fUJ"/>
                 <outlet property="signUpButton" destination="dQ0-BE-DPL" id="Fcf-aC-qmw"/>
