@@ -22,6 +22,7 @@
 		FAAC50951DAD0829003E7E0F /* CreateTodoWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50941DAD0829003E7E0F /* CreateTodoWireframe.swift */; };
 		FAAC50E21DAE57C3003E7E0F /* CreateTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50E11DAE57C3003E7E0F /* CreateTodoPresenter.swift */; };
 		FAAC50EA1DAE59C4003E7E0F /* TodoMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50E91DAE59C4003E7E0F /* TodoMVCTests.swift */; };
+		FAAC50F21DAE5F78003E7E0F /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50F11DAE5F78003E7E0F /* TodoService.swift */; };
 		FAD44F0A1DABAD730099D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD44F091DABAD730099D708 /* AppDelegate.swift */; };
 		FAD44F111DABAD730099D708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F101DABAD730099D708 /* Assets.xcassets */; };
 		FAD44F141DABAD730099D708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD44F121DABAD730099D708 /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		FAAC50E71DAE59C4003E7E0F /* TodoMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAC50E91DAE59C4003E7E0F /* TodoMVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMVCTests.swift; sourceTree = "<group>"; };
 		FAAC50EB1DAE59C4003E7E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAC50F11DAE5F78003E7E0F /* TodoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoService.swift; sourceTree = "<group>"; };
 		FAD44F061DABAD730099D708 /* TodoMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD44F091DABAD730099D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD44F101DABAD730099D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				FAAC50921DAD04F5003E7E0F /* TodoAppRouter.swift */,
 				FAAC50941DAD0829003E7E0F /* CreateTodoWireframe.swift */,
 				FAAC50E11DAE57C3003E7E0F /* CreateTodoPresenter.swift */,
+				FAAC50F11DAE5F78003E7E0F /* TodoService.swift */,
 			);
 			path = TodoMVC;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				FAAC508B1DACF6CF003E7E0F /* TodoListViewController.swift in Sources */,
 				FAAC50861DACF1A4003E7E0F /* TodoItem.swift in Sources */,
 				FAAC50891DACF3B5003E7E0F /* AuthManager.swift in Sources */,
+				FAAC50F21DAE5F78003E7E0F /* TodoService.swift in Sources */,
 				FAD44F281DABB07D0099D708 /* LoginViewController.swift in Sources */,
 				FAAC50951DAD0829003E7E0F /* CreateTodoWireframe.swift in Sources */,
 				FAAC50911DAD0478003E7E0F /* TodoListWireframe.swift in Sources */,

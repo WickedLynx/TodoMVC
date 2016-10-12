@@ -20,7 +20,8 @@ class CreateTodoPresenter {
             createTodoView?.showErrorMessage("Please enter the todo description")
             return
         }
-        createTodoView?.createTodoWithText(todoText)
+        
+        // Call service
     }
 }
 

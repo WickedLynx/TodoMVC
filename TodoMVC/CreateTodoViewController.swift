@@ -11,17 +11,19 @@ import Alamofire
 
 protocol ICreateTodoView: class {
     func showErrorMessage(message: String)
-    func createTodoWithText(todoText: String)
 }
 
 class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
     private lazy var wireframe = CreateTodoWireframe()
     private var presenter: CreateTodoPresenter?
+    private var service: TodoService?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = CreateTodoPresenter(createTodoView: self)
+        service = TodoService(authManager: AuthManager.sharedManager)
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
@@ -35,7 +37,7 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
         showAlertWithMessage(message)
     }
     
-    func createTodoWithText(todoText: String) {
+    func goBack() {
     }
     
     func addTodo() {
@@ -45,21 +47,13 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
             return
         }
         startLoading()
-        let url = BASE_URL + "/todos/create"
-        Alamofire.request(.POST, url, parameters: ["description" : text], headers: AuthManager.sharedManager.authHeaders).responseString {[weak self] response in
+        service?.createTodo(text, success: {[weak self] (_) in
             self?.stopLoading()
-            guard let jsonString = response.result.value else {
-                let message = response.result.error?.localizedDescription ?? ""
-                self?.showAlertWithMessage("Unable to add todo: \(message)")
-                return
-            }
-            let createResponse = CreateTodoResponse(JSONString: jsonString)
-            guard let _ = createResponse?.todo where createResponse?.error == nil else {
-                self?.showAlertWithMessage(createResponse?.error?.nsError.localizedDescription ?? "Unable to create todo")
-                return
-            }
             self?.wireframe.goBack()
-        }
+            }, failure: {[weak self] (error) in
+                self?.stopLoading()
+                self?.showErrorMessage(error?.localizedDescription ?? "Cannot create Todo")
+            })
 
     }
 }
