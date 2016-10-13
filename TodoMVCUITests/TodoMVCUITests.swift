@@ -7,15 +7,16 @@
 //
 
 import XCTest
+import SBTUITestTunnel
 
 
 class TodoMVCUITests: XCTestCase {
-    var app: XCUIApplication!
+    var app: SBTUITunneledApplication!
         
     override func setUp() {
         super.setUp()
-        app = XCUIApplication()
-        app.launch()
+        app = SBTUITunneledApplication()
+        app.launchTunnel()
         continueAfterFailure = false
     }
     
@@ -24,7 +25,15 @@ class TodoMVCUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testShouldGoToListScreenAfterSuccessfulLogin() {
+    func login() {
+        
+        let matcher = SBTRequestMatch.URL("/login", method: "POST")
+        app.stubRequestsMatching(matcher, returnJsonNamed: "login_response.json", returnCode: 200, responseTime: SBTUITunnelStubsDownloadSpeed3G)
+        
+        let expection = expectationWithDescription("Login call done")
+        app.waitForMonitoredRequestsMatching(matcher, timeout: 10) { (matched) in
+            expection.fulfill()
+        }
         
         app.textFields["Email"].typeText("harshad@leftshift.io")
         app.buttons["Next:"].tap()
@@ -34,8 +43,29 @@ class TodoMVCUITests: XCTestCase {
         app.secureTextFields["Password"].pressForDuration(1.2)
         app.menuItems["Paste"].tap()
         app.keyboards.buttons["Done"].tap()
-        sleep(2)
+        
+    
+    }
+    
+    func testShouldShowListScreenAfterSuccessfulLogin() {
+        let matcher = SBTRequestMatch.URL("/todos", method: "GET")
+        app.stubRequestsMatching(matcher, returnJsonNamed: "todos_response.json", returnCode: 200, responseTime: SBTUITunnelStubsDownloadSpeed3G)
+        
+        let expection = expectationWithDescription("Todos call done")
+        app.waitForMonitoredRequestsMatching(matcher, timeout: 10) { (matched) in
+            expection.fulfill()
+        }
+        
+        login()
+        
+        waitForExpectationsWithTimeout(5) { (error) in
+            if error != nil {
+                XCTFail("Timed out: \(error!)")
+            }
+        }
+        
         XCTAssert(app.navigationBars["Todo List"].exists, "Did not go to the Todo List screen")
+        XCTAssert(app.staticTexts["Meow"].exists, "Did not show the todo list")
     }
     
 }
