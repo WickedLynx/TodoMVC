@@ -8,6 +8,7 @@ target 'TodoMVC' do
   # Pods for TodoMVC
 	pod 'Alamofire', '3.4.1'
 	pod 'ObjectMapper', '~> 1.3.0'
+	pod 'SBTUITestTunnel/Server', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
 end
 
 target 'TodoMVCTests' do
@@ -17,4 +18,9 @@ target 'TodoMVCTests' do
 	pod 'Nimble', '~> 3.0'
 	pod 'MockFive'
 	pod 'Nimble-Snapshots'
+end
+
+target 'TodoMVCUITests' do
+	use_frameworks!
+	pod 'SBTUITestTunnel/Client', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
 end
