@@ -18,15 +18,26 @@ protocol ICreateTodoView: class {
 
 class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
-    private lazy var wireframe = CreateTodoWireframe()
-    private var presenter: CreateTodoPresenter?
+    private var wireframe:CreateTodoWireframe!
     private var service: ITodoService?
+    private var presenter: CreateTodoPresenter?
     
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        wireframe = CreateTodoWireframe()
+        service = TodoService(authManager: AuthManager.sharedManager)
+        presenter = CreateTodoPresenter(createTodoView: self, service: service!)
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = TodoService(authManager: AuthManager.sharedManager)
-        presenter = CreateTodoPresenter(createTodoView: self, service: service!)
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
