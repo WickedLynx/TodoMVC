@@ -17,7 +17,11 @@ class TodoListWireframe {
     }
     
     func showCreateTodoScreen() {
-        let addController = CreateTodoViewController(nibName: "CreateTodoViewController", bundle: nil)
-        router.pushViewController(addController, animated: true)
+        let wireframe = CreateTodoWireframe()
+        let service = TodoService(authManager: AuthManager.sharedManager)
+        let presenter = CreateTodoPresenter(service: service, wireframe:wireframe)
+        let view = CreateTodoViewController(presenter: presenter)
+        presenter.view = view
+        router.pushViewController(view, animated: true)
     }
 }

@@ -18,16 +18,12 @@ protocol ICreateTodoView: class {
 
 class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
-    private var wireframe:CreateTodoWireframe!
-    private var service: ITodoService?
-    private var presenter: CreateTodoPresenter?
+    private var presenter: CreateTodoPresenter!
     
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?){
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        wireframe = CreateTodoWireframe()
-        service = TodoService(authManager: AuthManager.sharedManager)
-        presenter = CreateTodoPresenter(createTodoView: self, service: service!)
+    init(presenter: CreateTodoPresenter!){
+        super.init(nibName: "CreateTodoViewController", bundle: nil)
+        self.presenter = presenter
     }
     
     
@@ -60,7 +56,7 @@ class CreateTodoViewController: UIViewController, ICreateTodoView {
     }
     
     func onCreateTodo() {
-        wireframe.goBack()
+        presenter.goBack()
     }
     
     func addTodo() {

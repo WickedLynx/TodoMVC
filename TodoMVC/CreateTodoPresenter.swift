@@ -9,27 +9,34 @@
 import Foundation
 
 class CreateTodoPresenter {
-    private weak var createTodoView: ICreateTodoView?
+    internal weak var view: ICreateTodoView?
     private let service: ITodoService
+    private let wireframe:CreateTodoWireframe
     
-    init(createTodoView: ICreateTodoView, service: ITodoService) {
-        self.createTodoView = createTodoView
+    init(service: ITodoService, wireframe:CreateTodoWireframe) {
         self.service = service
+        self.wireframe = wireframe
     }
+    
+    
     
     func addTodo(todoText: String?) {
         guard let text = todoText where text.characters.count > 0 else {
-            createTodoView?.showErrorMessage("Please enter the todo description")
+            view?.showErrorMessage("Please enter the todo description")
             return
         }
-        createTodoView?.showLoading()
+        view?.showLoading()
         service.createTodo(text, success: {[weak self] (_) in
-            self?.createTodoView?.hideLoading()
-            self?.createTodoView?.onCreateTodo()
+            self?.view?.hideLoading()
+            self?.view?.onCreateTodo()
             }, failure: {[weak self] (error) in
-                self?.createTodoView?.hideLoading()
-                self?.createTodoView?.showErrorMessage(error?.localizedDescription ?? "Cannot create Todo")
+                self?.view?.hideLoading()
+                self?.view?.showErrorMessage(error?.localizedDescription ?? "Cannot create Todo")
             })
+    }
+    
+    func goBack(){
+        wireframe.goBack()
     }
 }
 
