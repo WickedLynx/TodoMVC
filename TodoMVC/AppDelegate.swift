@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
+        TodoAppRouter.setUpAppRouter()
         return true
     }
 

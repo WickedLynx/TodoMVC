@@ -10,11 +10,7 @@ import Foundation
 import UIKit
 
 class TodoListWireframe {
-    var router: TodoAppRouter
-    
-    init() {
-        router = TodoAppRouter()
-    }
+    var router: IAppRouter = TodoAppRouter.sharedInstance
     
     func showCreateTodoScreen() {
         let wireframe = CreateTodoWireframe()
