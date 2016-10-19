@@ -8,7 +8,11 @@
 
 import Foundation
 
-class CreateTodoWireframe {
+protocol ICreateTodoWireframe {
+    func goBack()
+}
+
+class CreateTodoWireframe : ICreateTodoWireframe {
     let router: IAppRouter = TodoAppRouter.sharedInstance
     
     func goBack() {
