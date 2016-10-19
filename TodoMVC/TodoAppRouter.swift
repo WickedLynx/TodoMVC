@@ -33,7 +33,7 @@ class TodoAppRouter : IAppRouter {
     class func setUpAppRouter() {
         let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController
         let assembler = Assembler()
-        assembler.applyAssemblies([CreateTodoAssembly()])
+        assembler.applyAssemblies([CommonAssembly(),CreateTodoAssembly()])
 
         sharedInstance = TodoAppRouter(navigationController: nc!, assembler: assembler)
     }

@@ -14,8 +14,9 @@ class CreateTodoAssembly : AssemblyType{
     
     func assemble(container: Container){
         
-        container.register(ICreateTodoWireframe.self){ _ in
-            return CreateTodoWireframe()
+        container.register(ICreateTodoWireframe.self){ r in
+            let router = r.resolve(IAppRouter.self)!
+            return CreateTodoWireframe(router:router)
         }
 
         container.register(ITodoService.self){ _ in

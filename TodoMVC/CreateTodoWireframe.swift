@@ -13,7 +13,11 @@ protocol ICreateTodoWireframe {
 }
 
 class CreateTodoWireframe : ICreateTodoWireframe {
-    let router: IAppRouter = TodoAppRouter.sharedInstance
+    let router: IAppRouter
+    
+    init(router: IAppRouter){
+        self.router = router
+    }
     
     func goBack() {
         router.popCurrentViewController(true)
