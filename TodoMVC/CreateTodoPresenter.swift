@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ICreateTodoPresenter {
+    var view: ICreateTodoView? { get set}
     func addTodo(todoText: String?)
     func goBack()
 }
@@ -17,9 +18,9 @@ protocol ICreateTodoPresenter {
 class CreateTodoPresenter :ICreateTodoPresenter{
     internal weak var view: ICreateTodoView?
     private let service: ITodoService
-    private let wireframe:CreateTodoWireframe
+    private let wireframe:ICreateTodoWireframe
     
-    init(service: ITodoService, wireframe:CreateTodoWireframe) {
+    init(service: ITodoService, wireframe:ICreateTodoWireframe) {
         self.service = service
         self.wireframe = wireframe
     }

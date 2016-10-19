@@ -21,6 +21,7 @@ PODS:
   - SBTUITestTunnel/Server (1.0.2):
     - FXKeychain
     - GCDWebServer (~> 3.0)
+  - Swinject (1.1.4)
 
 DEPENDENCIES:
   - Alamofire (= 3.4.1)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Quick (= 0.8)
   - SBTUITestTunnel/Client (from `https://github.com/venkateshcm/SBTUITestTunnel`)
   - SBTUITestTunnel/Server (from `https://github.com/venkateshcm/SBTUITestTunnel`)
+  - Swinject (~> 1.1.0)
 
 EXTERNAL SOURCES:
   SBTUITestTunnel:
@@ -52,7 +54,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
   SBTUITestTunnel: 2ab3917cd90157d622c0dc7d06cf976bd74b96fe
+  Swinject: 8863ebff588a8574f1bc9af8a6abed11389865f7
 
-PODFILE CHECKSUM: ccb1d5e586facca5b3c2bf932a9482f5c74fb802
+PODFILE CHECKSUM: e86836a2380b344cb6711c751a4c8098224ff363
 
 COCOAPODS: 1.0.1
