@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6F758D4A1E08669B01D73BE5 /* Pods_TodoMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA23517FE53BBB8B95657E7 /* Pods_TodoMVC.framework */; };
 		B6D75A167F414D53387B72DA /* Pods_TodoMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9E199FAC2847E40ACF2A1D /* Pods_TodoMVCTests.framework */; };
-		E4562B3E030131428279FA46 /* Pods_TodoMVCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31A92ADF016F0CAA6ACAC91 /* Pods_TodoMVCUITests.framework */; };
 		FAAC50811DACF103003E7E0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50801DACF103003E7E0F /* Constants.swift */; };
 		FAAC50851DACF1A4003E7E0F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50821DACF1A4003E7E0F /* APIError.swift */; };
 		FAAC50861DACF1A4003E7E0F /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50831DACF1A4003E7E0F /* TodoItem.swift */; };
@@ -47,13 +46,6 @@
 			remoteGlobalIDString = FAD44F051DABAD730099D708;
 			remoteInfo = TodoMVC;
 		};
-		FAAC51021DAF86B5003E7E0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAD44EFE1DABAD730099D708 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAD44F051DABAD730099D708;
-			remoteInfo = TodoMVC;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +76,6 @@
 		FAAC50F31DAE6D15003E7E0F /* TodoServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoServiceMock.swift; sourceTree = "<group>"; };
 		FAAC50F51DAE7180003E7E0F /* CreateTodoViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoViewMock.swift; sourceTree = "<group>"; };
 		FAAC50F71DAE7230003E7E0F /* CreateTodoPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoPresenterTest.swift; sourceTree = "<group>"; };
-		FAAC50FD1DAF86B5003E7E0F /* TodoMVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoMVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD44F061DABAD730099D708 /* TodoMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD44F091DABAD730099D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD44F101DABAD730099D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,14 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D75A167F414D53387B72DA /* Pods_TodoMVCTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAAC50FA1DAF86B5003E7E0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4562B3E030131428279FA46 /* Pods_TodoMVCUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +162,6 @@
 			children = (
 				FAD44F061DABAD730099D708 /* TodoMVC.app */,
 				FAAC50E71DAE59C4003E7E0F /* TodoMVCTests.xctest */,
-				FAAC50FD1DAF86B5003E7E0F /* TodoMVCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,27 +221,6 @@
 			productReference = FAAC50E71DAE59C4003E7E0F /* TodoMVCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FAAC50FC1DAF86B5003E7E0F /* TodoMVCUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FAAC51041DAF86B5003E7E0F /* Build configuration list for PBXNativeTarget "TodoMVCUITests" */;
-			buildPhases = (
-				77E3B5762A375BD8F4D62F14 /* [CP] Check Pods Manifest.lock */,
-				FAAC50F91DAF86B5003E7E0F /* Sources */,
-				FAAC50FA1DAF86B5003E7E0F /* Frameworks */,
-				FAAC50FB1DAF86B5003E7E0F /* Resources */,
-				C0B8081F4BFB68EAE3ED358B /* [CP] Copy Pods Resources */,
-				FAAC51071DAF8837003E7E0F /* Copy Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FAAC51031DAF86B5003E7E0F /* PBXTargetDependency */,
-			);
-			name = TodoMVCUITests;
-			productName = TodoMVCUITests;
-			productReference = FAAC50FD1DAF86B5003E7E0F /* TodoMVCUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		FAD44F051DABAD730099D708 /* TodoMVC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD44F181DABAD730099D708 /* Build configuration list for PBXNativeTarget "TodoMVC" */;
@@ -294,10 +255,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = FAD44F051DABAD730099D708;
 					};
-					FAAC50FC1DAF86B5003E7E0F = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = FAD44F051DABAD730099D708;
-					};
 					FAD44F051DABAD730099D708 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -318,20 +275,12 @@
 			targets = (
 				FAD44F051DABAD730099D708 /* TodoMVC */,
 				FAAC50E61DAE59C4003E7E0F /* TodoMVCTests */,
-				FAAC50FC1DAF86B5003E7E0F /* TodoMVCUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FAAC50E51DAE59C4003E7E0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAAC50FB1DAF86B5003E7E0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,21 +380,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoMVC/Pods-TodoMVC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77E3B5762A375BD8F4D62F14 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		7E55BC5C81443806A00778B0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,35 +395,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoMVCTests/Pods-TodoMVCTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C0B8081F4BFB68EAE3ED358B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoMVCUITests/Pods-TodoMVCUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAAC51071DAF8837003E7E0F /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoMVCUITests/Pods-TodoMVCUITests-frameworks.sh\"";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -501,13 +406,6 @@
 				FAAC50F61DAE7180003E7E0F /* CreateTodoViewMock.swift in Sources */,
 				FAAC50F81DAE7230003E7E0F /* CreateTodoPresenterTest.swift in Sources */,
 				FAAC50F41DAE6D15003E7E0F /* TodoServiceMock.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAAC50F91DAF86B5003E7E0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,11 +438,6 @@
 			isa = PBXTargetDependency;
 			target = FAD44F051DABAD730099D708 /* TodoMVC */;
 			targetProxy = FAAC50EC1DAE59C4003E7E0F /* PBXContainerItemProxy */;
-		};
-		FAAC51031DAF86B5003E7E0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAD44F051DABAD730099D708 /* TodoMVC */;
-			targetProxy = FAAC51021DAF86B5003E7E0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,30 +476,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gojek.TodoMVCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoMVC.app/TodoMVC";
-			};
-			name = Release;
-		};
-		FAAC51051DAF86B5003E7E0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70ECFD4AA1AC245F0D6F6FC9 /* Pods-TodoMVCUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = TodoMVCUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gojek.TodoMVCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TodoMVC;
-			};
-			name = Debug;
-		};
-		FAAC51061DAF86B5003E7E0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1018FFA5A6CE87C9EB7509DC /* Pods-TodoMVCUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = TodoMVCUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gojek.TodoMVCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TodoMVC;
 			};
 			name = Release;
 		};
@@ -725,15 +594,6 @@
 			buildConfigurations = (
 				FAAC50EF1DAE59C4003E7E0F /* Debug */,
 				FAAC50F01DAE59C4003E7E0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FAAC51041DAF86B5003E7E0F /* Build configuration list for PBXNativeTarget "TodoMVCUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAAC51051DAF86B5003E7E0F /* Debug */,
-				FAAC51061DAF86B5003E7E0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
