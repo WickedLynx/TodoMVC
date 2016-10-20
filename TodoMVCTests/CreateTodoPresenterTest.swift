@@ -17,7 +17,9 @@ class CreateTodoPresenterTest: QuickSpec {
     override func spec() {
         let todoServiceMock = TodoServiceMock()
         let todoViewMock = CreateTodoViewMock()
-        let presenter = CreateTodoPresenter(createTodoView: todoViewMock, service: todoServiceMock)
+        let wireframeMock = CreateTodoWireframeMock()
+        let presenter = CreateTodoPresenter(service: todoServiceMock,wireframe: wireframeMock)
+        presenter.view = todoViewMock
         
         beforeEach {
             todoServiceMock.resetMock()

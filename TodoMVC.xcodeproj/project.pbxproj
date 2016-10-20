@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F758D4A1E08669B01D73BE5 /* Pods_TodoMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA23517FE53BBB8B95657E7 /* Pods_TodoMVC.framework */; };
+		841A95911DB87E19006D2140 /* CreateTodoWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A95901DB87E19006D2140 /* CreateTodoWireframeMock.swift */; };
 		B6D75A167F414D53387B72DA /* Pods_TodoMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9E199FAC2847E40ACF2A1D /* Pods_TodoMVCTests.framework */; };
 		FAAC50811DACF103003E7E0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50801DACF103003E7E0F /* Constants.swift */; };
 		FAAC50851DACF1A4003E7E0F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50821DACF1A4003E7E0F /* APIError.swift */; };
@@ -53,6 +54,7 @@
 		5CBA79AC3F57B92F621A2129 /* Pods-TodoMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVC/Pods-TodoMVC.debug.xcconfig"; sourceTree = "<group>"; };
 		6D62115FA7ED08761D21D2F2 /* Pods-TodoMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVC/Pods-TodoMVC.release.xcconfig"; sourceTree = "<group>"; };
 		70ECFD4AA1AC245F0D6F6FC9 /* Pods-TodoMVCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVCUITests/Pods-TodoMVCUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		841A95901DB87E19006D2140 /* CreateTodoWireframeMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoWireframeMock.swift; sourceTree = "<group>"; };
 		A1348EF307AA26D792D45442 /* Pods-TodoMVCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVCTests/Pods-TodoMVCTests.release.xcconfig"; sourceTree = "<group>"; };
 		D31A92ADF016F0CAA6ACAC91 /* Pods_TodoMVCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoMVCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA23517FE53BBB8B95657E7 /* Pods_TodoMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 				FAAC50F31DAE6D15003E7E0F /* TodoServiceMock.swift */,
 				FAAC50F51DAE7180003E7E0F /* CreateTodoViewMock.swift */,
 				FAAC50F71DAE7230003E7E0F /* CreateTodoPresenterTest.swift */,
+				841A95901DB87E19006D2140 /* CreateTodoWireframeMock.swift */,
 			);
 			path = TodoMVCTests;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841A95911DB87E19006D2140 /* CreateTodoWireframeMock.swift in Sources */,
 				FAAC50EA1DAE59C4003E7E0F /* TodoMVCTests.swift in Sources */,
 				FAAC50F61DAE7180003E7E0F /* CreateTodoViewMock.swift in Sources */,
 				FAAC50F81DAE7230003E7E0F /* CreateTodoPresenterTest.swift in Sources */,

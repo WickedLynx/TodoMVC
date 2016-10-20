@@ -11,9 +11,9 @@ import Foundation
 class CreateTodoPresenter {
     internal weak var view: ICreateTodoView?
     private let service: ITodoService
-    private let wireframe:CreateTodoWireframe
+    private let wireframe:ICreateTodoWireframe
     
-    init(service: ITodoService, wireframe:CreateTodoWireframe) {
+    init(service: ITodoService, wireframe:ICreateTodoWireframe) {
         self.service = service
         self.wireframe = wireframe
     }

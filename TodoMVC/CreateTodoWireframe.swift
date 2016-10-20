@@ -8,12 +8,12 @@
 
 import Foundation
 
-class CreateTodoWireframe {
-    let router: TodoAppRouter
-    
-    init() {
-        router = TodoAppRouter()
-    }
+protocol ICreateTodoWireframe {
+    func goBack()
+}
+
+class CreateTodoWireframe : ICreateTodoWireframe {
+    let router: IAppRouter = TodoAppRouter.sharedInstance
     
     func goBack() {
         router.popCurrentViewController(true)
