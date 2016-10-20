@@ -20,7 +20,3 @@ target 'TodoMVCTests' do
 	pod 'Nimble-Snapshots'
 end
 
-target 'TodoMVCUITests' do
-	use_frameworks!
-	pod 'SBTUITestTunnel/Client', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
-end
