@@ -9,16 +9,34 @@
 import Foundation
 import UIKit
 
-class TodoAppRouter {
-    var navigationController: UINavigationController? {
-        return UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController
+protocol ITodoAppRouter {
+    func pushViewController(viewController: UIViewController, animated: Bool)
+    func popCurrentViewController(animated: Bool)
+}
+
+
+class TodoAppRouter : ITodoAppRouter{
+    
+    
+    static let sharedInstance : ITodoAppRouter = TodoAppRouter.setupAppRouter()
+    
+    let navigationController:UINavigationController
+    
+    private init(navigationController:UINavigationController){
+        self.navigationController = navigationController
+    }
+    
+    private class func setupAppRouter() -> ITodoAppRouter {
+        let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController
+        let appRouter = TodoAppRouter(navigationController:nc!)
+        return appRouter
     }
     
     func pushViewController(viewController: UIViewController, animated: Bool) {
-        navigationController?.pushViewController(viewController, animated: animated)
+        navigationController.pushViewController(viewController, animated: animated)
     }
     
     func popCurrentViewController(animated: Bool) {
-        navigationController?.popViewControllerAnimated(animated)
+        navigationController.popViewControllerAnimated(animated)
     }
 }
