@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298D34571DBF4275002FDF50 /* CreateTodoWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298D34561DBF4275002FDF50 /* CreateTodoWireframe.swift */; };
 		6F758D4A1E08669B01D73BE5 /* Pods_TodoMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA23517FE53BBB8B95657E7 /* Pods_TodoMVC.framework */; };
 		D91C594CF628B89BD0931C15 /* Pods_TodoMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3469D363B128E27EA45F283B /* Pods_TodoMVCTests.framework */; };
 		FAAC50811DACF103003E7E0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC50801DACF103003E7E0F /* Constants.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		298D34561DBF4275002FDF50 /* CreateTodoWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTodoWireframe.swift; sourceTree = "<group>"; };
 		3469D363B128E27EA45F283B /* Pods_TodoMVCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoMVCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBA79AC3F57B92F621A2129 /* Pods-TodoMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVC/Pods-TodoMVC.debug.xcconfig"; sourceTree = "<group>"; };
 		6D62115FA7ED08761D21D2F2 /* Pods-TodoMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoMVC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoMVC/Pods-TodoMVC.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				FAAC508A1DACF6CF003E7E0F /* TodoListViewController.swift */,
 				FAAC508C1DACF95E003E7E0F /* UIViewControllerAdditions.swift */,
 				FAAC508E1DACFC0A003E7E0F /* CreateTodoViewController.swift */,
+				298D34561DBF4275002FDF50 /* CreateTodoWireframe.swift */,
 			);
 			path = TodoMVC;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				FAAC50DA1DAD1E87003E7E0F /* BalanceValidator.swift in Sources */,
 				FAAC50861DACF1A4003E7E0F /* TodoItem.swift in Sources */,
 				FAAC50891DACF3B5003E7E0F /* AuthManager.swift in Sources */,
+				298D34571DBF4275002FDF50 /* CreateTodoWireframe.swift in Sources */,
 				FAD44F281DABB07D0099D708 /* LoginViewController.swift in Sources */,
 				FAAC50871DACF1A4003E7E0F /* User.swift in Sources */,
 				FAAC50851DACF1A4003E7E0F /* APIError.swift in Sources */,

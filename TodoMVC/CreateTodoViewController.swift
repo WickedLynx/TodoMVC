@@ -12,17 +12,20 @@ import Alamofire
 class CreateTodoViewController: UIViewController {
     @IBOutlet weak var textField: UITextField?
 
+    var wireframe: CreateTodoWireframe?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        wireframe = CreateTodoWireframe()
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
     }
-    
+
     func touchDone() {
         addTodo()
     }
-    
+
     func addTodo() {
         let todoText = textField?.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         guard let text = todoText where text.characters.count > 0 else {
@@ -43,10 +46,7 @@ class CreateTodoViewController: UIViewController {
                 self?.showAlertWithMessage(createResponse?.error?.nsError.localizedDescription ?? "Unable to create todo")
                 return
             }
-            self?.navigationController?.popViewControllerAnimated(true)
+            self?.wireframe?.goBack()
         }
-
     }
-    
-
 }
