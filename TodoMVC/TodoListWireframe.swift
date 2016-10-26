@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Swinject
 
 class TodoListWireframe {
     var router: ITodoAppRouter
@@ -18,7 +17,11 @@ class TodoListWireframe {
     }
     
     func showCreateTodoScreen() {
-        let view = router.resolver.resolve(CreateTodoViewController.self)!
+        let wireframe = CreateTodoWireframe()
+        let service = TodoService(authManager: AuthManager.sharedManager)
+        let presenter = CreateTodoPresenter(service: service, wireframe:wireframe)
+        let view = CreateTodoViewController(presenter: presenter)
+        presenter.view = view
         router.pushViewController(view, animated: true)
     }
 }

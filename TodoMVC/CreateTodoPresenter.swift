@@ -8,14 +8,7 @@
 
 import Foundation
 
-protocol ICreateTodoPresenter {
-    var view: ICreateTodoView? { get set}
-    func addTodo(todoText: String?)
-    func goBack()
-    
-}
-
-class CreateTodoPresenter : ICreateTodoPresenter{
+class CreateTodoPresenter {
     internal weak var view: ICreateTodoView?
     private let service: ITodoService
     private let wireframe:ICreateTodoWireframe

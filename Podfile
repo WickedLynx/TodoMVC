@@ -6,7 +6,6 @@ target 'TodoMVC' do
   use_frameworks!
 
   # Pods for TodoMVC
-    pod 'Swinject', '~> 1.1.0'
 	pod 'Alamofire', '3.4.1'
 	pod 'ObjectMapper', '~> 1.3.0'
 	pod 'SBTUITestTunnel/Server', :git => 'https://github.com/venkateshcm/SBTUITestTunnel'
