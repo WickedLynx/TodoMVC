@@ -9,14 +9,23 @@
 import UIKit
 import Alamofire
 
-class CreateTodoViewController: UIViewController {
+protocol ICreateTodoView : class {
+    func showAlertWithMessage(message: String)
+
+    func startLoading()
+
+    func stopLoading()
+}
+
+class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
 
-    var wireframe: CreateTodoWireframe?
+    var createTodoPresenter: CreateTodoPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        wireframe = CreateTodoWireframe()
+        createTodoPresenter = CreateTodoPresenter(view: self, todoService:  TodoService(), wireframe: CreateTodoWireframe())
+
         title = "Add Todo"
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(CreateTodoViewController.touchDone))
         navigationItem.rightBarButtonItem = doneButton
@@ -27,26 +36,7 @@ class CreateTodoViewController: UIViewController {
     }
 
     func addTodo() {
-        let todoText = textField?.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        guard let text = todoText where text.characters.count > 0 else {
-            showAlertWithMessage("Please enter the todo description")
-            return
-        }
-        startLoading()
-        let url = BASE_URL + "/todos/create"
-        Alamofire.request(.POST, url, parameters: ["description" : text], headers: AuthManager.sharedManager.authHeaders).responseString {[weak self] response in
-            self?.stopLoading()
-            guard let jsonString = response.result.value else {
-                let message = response.result.error?.localizedDescription ?? ""
-                self?.showAlertWithMessage("Unable to add todo: \(message)")
-                return
-            }
-            let createResponse = CreateTodoResponse(JSONString: jsonString)
-            guard let _ = createResponse?.todo where createResponse?.error == nil else {
-                self?.showAlertWithMessage(createResponse?.error?.nsError.localizedDescription ?? "Unable to create todo")
-                return
-            }
-            self?.wireframe?.goBack()
-        }
+        let input = textField?.text
+        createTodoPresenter?.addTodo(input)
     }
 }
