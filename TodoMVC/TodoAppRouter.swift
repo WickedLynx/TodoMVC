@@ -8,27 +8,35 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 protocol ITodoAppRouter {
+    var resolver: ResolverType { get }
     func pushViewController(viewController: UIViewController, animated: Bool)
     func popCurrentViewController(animated: Bool)
 }
 
-
-class TodoAppRouter : ITodoAppRouter{
-    
-    
+class TodoAppRouter : ITodoAppRouter {
     static let sharedInstance : ITodoAppRouter = TodoAppRouter.setupAppRouter()
     
     let navigationController:UINavigationController
-    
-    private init(navigationController:UINavigationController){
+    let assembler: Assembler
+
+    var resolver: ResolverType {
+        return assembler.resolver
+    }
+
+    private init(navigationController:UINavigationController, assembler: Assembler){
         self.navigationController = navigationController
+        self.assembler = assembler
     }
     
     private class func setupAppRouter() -> ITodoAppRouter {
+        let assembly = Assembler()
+        assembly.applyAssemblies([CreateTodoAssembly()])
+
         let nc = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController
-        let appRouter = TodoAppRouter(navigationController:nc!)
+        let appRouter = TodoAppRouter(navigationController:nc!, assembler: assembly)
         return appRouter
     }
     

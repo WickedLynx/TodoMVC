@@ -8,7 +8,16 @@
 
 import Foundation
 
-class CreateTodoPresenter {
+protocol ICreateTodoPresenter {
+    var view: ICreateTodoView? { get set }
+
+    func addTodo(todoText: String?)
+
+    func goBack()
+}
+
+
+class CreateTodoPresenter : ICreateTodoPresenter {
     internal weak var view: ICreateTodoView?
     private let service: ITodoService
     private let wireframe:ICreateTodoWireframe
@@ -17,9 +26,7 @@ class CreateTodoPresenter {
         self.service = service
         self.wireframe = wireframe
     }
-    
-    
-    
+
     func addTodo(todoText: String?) {
         guard let text = todoText where text.characters.count > 0 else {
             view?.showErrorMessage("Please enter the todo description")
@@ -35,7 +42,7 @@ class CreateTodoPresenter {
             })
     }
     
-    func goBack(){
+    func goBack() {
         wireframe.goBack()
     }
 }
