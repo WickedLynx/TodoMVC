@@ -18,10 +18,10 @@ protocol ICreateTodoView: class {
 
 class CreateTodoViewController: UIViewController, ICreateTodoView {
     @IBOutlet weak var textField: UITextField?
-    private var presenter: CreateTodoPresenter!
+    private var presenter: ICreateTodoPresenter!
     
     
-    init(presenter: CreateTodoPresenter!){
+    init(presenter: ICreateTodoPresenter!){
         super.init(nibName: "CreateTodoViewController", bundle: nil)
         self.presenter = presenter
     }
